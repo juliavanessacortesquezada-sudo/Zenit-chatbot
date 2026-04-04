@@ -1,5 +1,6 @@
 import os
 import threading
+import json
 from dotenv import load_dotenv
 from unidecode import unidecode
 from flask import Flask
@@ -25,20 +26,29 @@ def run_flask():
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Hola 👋 Soy ZeenitBot 🧠✨. ¿En qué puedo ayudarte hoy?")
 
-async def responder(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    texto = unidecode(update.message.text.lower())
-    palabras = texto.split()
+#RESPONDER
+def cargar_conocimiento():
+    with open('conocimiento.json', 'r', encoding='utf-8') as f:
+        return json.load(f)
 
-    if any(p in ["cansada", "cansado", "cansancio", "sueño"] for p in palabras):
-        res = "Zeenit detecta fatiga 😴. Toma un descanso de 15 min lejos de pantallas."
-    elif any(p in ["estres", "ansiedad", "presion"] for p in palabras):
-        res = "Zeenit detecta estrés 🧠💥. Prueba respirar profundo: inhala en 4 seg, exhala en 8."
-    elif any(p in ["organizacion", "tiempo", "tareas"] for p in palabras):
-        res = "La organización reduce la carga mental 📅. ¡Prueba la técnica Pomodoro!"
-    else:
-        res = "Aún estoy aprendiendo. Pregúntame sobre estrés, cansancio u organización."
+async def responder(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    texto_usuario = unidecode(update.message.text.lower())
+    palabras = texto_usuario.split()
     
-    await update.message.reply_text(res)
+    # Cargamos el "cerebro" del JSON
+    datos = cargar_conocimiento()
+    respuesta_final = None
+
+    # Buscamos en el JSON si alguna palabra coincide con los tags
+    for intencion in datos['intenciones']:
+        if any(tag in palabras for tag in intencion['tags']):
+            respuesta_final = intencion['respuesta']
+            break
+
+    if not respuesta_final:
+        respuesta_final = "Aún estoy aprendiendo sobre eso. Intenta preguntarme sobre estrés, exámenes o fatiga."
+
+    await update.message.reply_text(respuesta_final)
 
 # 4. EJECUCIÓN
 if __name__ == "__main__":
