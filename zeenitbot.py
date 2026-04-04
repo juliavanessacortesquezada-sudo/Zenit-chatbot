@@ -41,7 +41,7 @@ async def responder(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # Buscamos en el JSON si alguna palabra coincide con los tags
     for intencion in datos['intenciones']:
-        if any(tag in palabras for tag in intencion['tags']):
+        if any(tag in texto_usuario for tag in intencion['tags']):
             respuesta_final = intencion['respuesta']
             break
 
