@@ -1,0 +1,20 @@
+{
+    "intenciones": [
+        {
+            "tags": ["estres", "ansiedad", "agobiada", "presion"],
+            "respuesta": "Zeenit detecta estrés 🧠💥. Respira: Inhala en 4s, mantén 7s, exhala 8s. ¡Tú puedes!"
+        },
+        {
+            "tags": ["cansancio", "sueno", "fatiga", "dormir"],
+            "respuesta": "Zeenit detecta fatiga académica 😴. Si llevas más de 2h, tu cerebro necesita 15 min de descanso real."
+        },
+        {
+            "tags": ["organizacion", "tiempo", "tareas", "horario"],
+            "respuesta": "La organización reduce la carga mental 📅. Divide tus tareas en pasos de máximo 20 minutos."
+        },
+        {
+            "tags": ["examen", "parcial", "prueba"],
+            "respuesta": "¡Mucho éxito en tu examen! 📝 Recuerda que un repaso de 10 min antes de dormir ayuda a fijar la memoria."
+        }
+    ]
+}
