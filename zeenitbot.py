@@ -49,8 +49,6 @@ async def responder(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text(respuesta)
 
-# ... (tus funciones start y responder se quedan igual)
-
 app = ApplicationBuilder().token(TOKEN).build()
 
 app.add_handler(CommandHandler("start", start))
