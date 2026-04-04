@@ -16,8 +16,8 @@ def run_flask():
     port = int(os.environ.get("PORT", 10000))
     web_app.run(host='0.0.0.0', port=port)
 
-# --- TU CÓDIGO DEL BOT ---
-TOKEN = "TU_NUEVO_TOKEN_AQUÍ" # ¡Recuerda cambiarlo por seguridad!
+# --- CÓDIGO DEL BOT ---
+TOKEN = os.getenv("TOKEN") 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Hola 👋 Soy ZeenitBot 🧠✨...")
