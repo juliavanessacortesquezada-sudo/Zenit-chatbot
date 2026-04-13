@@ -5,7 +5,7 @@
             "respuesta": "Zeenit detecta estrés 🧠💥. Respira: Inhala en 4s, mantén 7s, exhala 8s. ¡Tú puedes!"
         },
         {
-            "tags": ["cansancio", "sueno", "fatiga", "dormir"],
+            "tags": ["cansancio", "sueno", "fatiga", "dormir", "cansada", "cansado"],
             "respuesta": "Zeenit detecta fatiga académica 😴. Si llevas más de 2h, tu cerebro necesita 15 min de descanso real."
         },
         {
