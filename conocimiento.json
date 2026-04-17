@@ -1,12 +1,32 @@
 {
     "intenciones": [
         {
-            "tags": ["estres", "ansiedad", "agobiada", "presion"],
+            "tags": ["estres", "ansied", "agobi", "presion"],
             "respuesta": "Zeenit detecta estrés 🧠💥. Respira: Inhala en 4s, mantén 7s, exhala 8s. ¡Tú puedes!"
         },
         {
-            "tags": ["cansancio", "sueno", "fatiga", "dormir", "cansada", "cansado"],
+            "tags": ["cansad", "sueno", "fatiga", "dormir"],
             "respuesta": "Zeenit detecta fatiga académica 😴. Si llevas más de 2h, tu cerebro necesita 15 min de descanso real."
+        },
+        {
+            "tags": ["organizacion", "tiempo", "tareas", "horario"],
+            "respuesta": "La organización reduce la carga mental 📅. Prueba la Técnica Pomodoro: 25 min de estudio intenso y 5 de descanso."
+        },
+        {
+            "tags": ["examen", "parcial", "prueba", "finales"],
+            "respuesta": "¡Mucho éxito en tus exámenes! 📝 Tip: Haz mapas mentales, ayudan a tu cerebro a conectar conceptos más rápido que solo leer."
+        },
+        {
+            "tags": ["procrastinar", "distraccion", "perder el tiempo", "celular"],
+            "respuesta": "¡Zeenit te ve! 👀 Aleja el celular 10 metros de tu escritorio. La fuerza de voluntad es limitada, el diseño de tu espacio no."
+        },
+        {
+            "tags": ["motivacion", "rendirse", "no puedo", "triste"],
+            "respuesta": "Es normal sentirse así a veces 🌟. Recuerda por qué empezaste. Un mal día no define tu capacidad como estudiante."
+        },
+        {
+            "tags": ["exponer", "publico", "nervios", "presentacion"],
+            "respuesta": "¡A dominar ese escenario! 🎤 Practica frente al espejo y recuerda que tú eres quien más sabe de tu tema en ese momento."
         },
         {
             "tags": ["organizacion", "tiempo", "tareas", "horario"],
@@ -17,4 +37,5 @@
             "respuesta": "¡Mucho éxito en tu examen! 📝 Recuerda que un repaso de 10 min antes de dormir ayuda a fijar la memoria."
         }
     ]
+    
 }
